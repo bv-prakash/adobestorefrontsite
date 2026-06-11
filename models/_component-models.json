@@ -13,8 +13,5 @@
   },
   {
     "...": "../blocks/*/_*.json#/models"
-  },
-  {
-    "...": "../blocks/complaint-form/_*.json#/models"
   }
 ]
