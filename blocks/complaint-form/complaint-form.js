@@ -1,5 +1,5 @@
 export default async function decorate(block) {
-    block.innerHTML = `
+  block.innerHTML = `
       <div class="complaint-form">
         <h2>Complaint Form</h2>
   
@@ -15,4 +15,4 @@ export default async function decorate(block) {
         <button>Submit</button>
       </div>
     `;
-  }
+}
