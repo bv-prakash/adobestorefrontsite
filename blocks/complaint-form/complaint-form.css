@@ -1,0 +1,17 @@
+.complaint-form {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 4px;
+  }
+  
+  .complaint-form input,
+  .complaint-form textarea {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 8px;
+  }
+  
+  .complaint-form button {
+    padding: 10px 16px;
+    cursor: pointer;
+  }

@@ -1,0 +1,36 @@
+{
+    "definitions": [
+      {
+        "title": "Complaint Form",
+        "id": "complaint-form",
+        "model": "complaint-form",
+        "plugins": {
+          "da": {
+            "rows": 1,
+            "columns": 1,
+            "fields": [
+              {
+                "name": "heading",
+                "selector": "h2"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "models": [
+      {
+        "id": "complaint-form",
+        "fields": [
+          {
+            "component": "text",
+            "name": "heading",
+            "label": "Heading",
+            "value": "Complaint Form",
+            "valueType": "string"
+          }
+        ]
+      }
+    ],
+    "filters": []
+  }

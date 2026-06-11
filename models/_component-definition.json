@@ -52,6 +52,9 @@
         },
         {
           "...": "../blocks/commerce-*/_*.json#/definitions"
+        },
+        {
+          "...": "../blocks/complaint-form/_*.json#/definitions"
         }
       ]
     },

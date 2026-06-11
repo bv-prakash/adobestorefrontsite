@@ -381,6 +381,18 @@
     ]
   },
   {
+    "id": "complaint-form",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading",
+        "value": "Complaint Form",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "enrichment",
     "fields": [
       {
@@ -522,6 +534,18 @@
         "component": "text",
         "name": "fragment",
         "label": "Fragment",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "complaint-form",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading",
+        "value": "Complaint Form",
         "valueType": "string"
       }
     ]
