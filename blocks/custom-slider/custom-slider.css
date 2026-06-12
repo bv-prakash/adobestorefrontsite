@@ -14,20 +14,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 32px;
+  padding: 10px 20px;
   text-align: center;
   box-sizing: border-box;
 }
 
+
 .slider-slide picture img {
-  max-width: 80px;
-  border-radius: 50%;
   margin-bottom: 16px;
 }
 
 .slider-slide p {
   font-size: 1.1rem;
-  font-style: italic;
 }
 
 .slider-btn {

@@ -646,6 +646,35 @@
               ]
             }
           }
+        },
+        {
+          "title": "Hero Slider",
+          "id": "hero-slider",
+          "model": "hero-slider",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 1,
+              "fields": [
+                {
+                  "name": "image",
+                  "selector": "div>div:nth-child(1)>picture>img[src]"
+                },
+                {
+                  "name": "alt",
+                  "selector": "div>div:nth-child(1)>picture>img[alt]"
+                },
+                {
+                  "name": "title",
+                  "selector": "div>div:nth-child(2)>h2"
+                },
+                {
+                  "name": "description",
+                  "selector": "div>div:nth-child(2)>p"
+                }
+              ]
+            }
+          }
         }
       ]
     },
