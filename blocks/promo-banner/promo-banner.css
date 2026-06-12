@@ -1,0 +1,33 @@
+.promo-banner-block {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.promo-banner-image img {
+  width: 100%;
+  display: block;
+}
+
+.promo-banner-content {
+  padding: 24px;
+  text-align: center;
+}
+
+.promo-banner-content h2 {
+  margin: 0 0 8px;
+  font-size: 1.8rem;
+}
+
+@media (min-width: 768px) {
+  .promo-banner-block {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .promo-banner-image,
+  .promo-banner-content {
+    flex: 1;
+  }
+}

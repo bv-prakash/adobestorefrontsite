@@ -588,6 +588,64 @@
               ]
             }
           }
+        },
+        {
+          "title": "Promo Banner",
+          "id": "promo-banner",
+          "model": "promo-banner",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 2,
+              "fields": [
+                {
+                  "name": "image",
+                  "selector": "div>div:nth-child(1)>picture>img[src]"
+                },
+                {
+                  "name": "alt",
+                  "selector": "div>div:nth-child(1)>picture>img[alt]"
+                },
+                {
+                  "name": "title",
+                  "selector": "div>div:nth-child(2)>h2"
+                },
+                {
+                  "name": "description",
+                  "selector": "div>div:nth-child(2)>p"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Custom Slider",
+          "id": "custom-slider",
+          "model": "custom-slider",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 3,
+              "fields": [
+                {
+                  "name": "image",
+                  "selector": "div>div:nth-child(1)>picture>img[src]"
+                },
+                {
+                  "name": "alt",
+                  "selector": "div>div:nth-child(1)>picture>img[alt]"
+                },
+                {
+                  "name": "quote",
+                  "selector": "div>div:nth-child(2)>p"
+                },
+                {
+                  "name": "name",
+                  "selector": "div>div:nth-child(3)"
+                }
+              ]
+            }
+          }
         }
       ]
     },

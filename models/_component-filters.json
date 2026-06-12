@@ -8,8 +8,5 @@
   },
   {
     "...": "../blocks/*/_*.json#/filters"
-  },
-  {
-    "...": "../blocks/complaint-form/_*.json#/filters"
   }
 ]

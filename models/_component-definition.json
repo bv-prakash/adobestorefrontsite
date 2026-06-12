@@ -55,6 +55,12 @@
         },
         {
           "...": "../blocks/complaint-form/_*.json#/definitions"
+        },
+         {
+          "...": "../blocks/promo-banner/_*.json#/definitions"
+        },
+        {
+          "...": "../blocks/custom-slider/_*.json#/definitions"
         }
       ]
     },

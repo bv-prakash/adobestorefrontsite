@@ -1,0 +1,57 @@
+{
+  "definitions": [
+    {
+      "title": "Custom Slider",
+      "id": "custom-slider",
+      "model": "custom-slider",
+      "plugins": {
+        "da": {
+          "rows": 1,
+          "columns": 3,
+          "fields": [
+            { "name": "image", "selector": "div>div:nth-child(1)>picture>img[src]" },
+            { "name": "alt", "selector": "div>div:nth-child(1)>picture>img[alt]" },
+            { "name": "quote", "selector": "div>div:nth-child(2)>p" },
+            { "name": "name", "selector": "div>div:nth-child(3)" }
+          ]
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "custom-slider",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Customer Photo",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "alt",
+          "label": "Alt",
+          "value": ""
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "quote",
+          "label": "Quote",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "name",
+          "label": "Customer Name",
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "filters": []
+}
