@@ -467,6 +467,18 @@
     ]
   },
   {
+    "id": "greeting",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "placeholder",
+        "label": "Input Placeholder",
+        "value": "Enter your name"
+      }
+    ]
+  },
+  {
     "id": "hero-slider",
     "fields": [
       {

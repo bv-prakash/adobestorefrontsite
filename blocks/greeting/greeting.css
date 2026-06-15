@@ -1,0 +1,20 @@
+.greeting-wrapper {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+}
+
+.greeting-input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+}
+
+.greeting-message {
+  margin: 0;
+
+}

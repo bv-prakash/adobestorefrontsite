@@ -60,14 +60,14 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: none;
-  background: rgb(255 255 255 / 50%);
+  background: #fff;
+  border: 2px solid #000;
   cursor: pointer;
   padding: 0;
 }
 
 .hero-slider-dot.active {
-  background: #fff;
+  background: #000;
 }
 
 @media (max-width: 768px) {

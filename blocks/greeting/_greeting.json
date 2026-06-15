@@ -1,0 +1,38 @@
+{
+  "definitions": [
+    {
+      "title": "Greeting",
+      "id": "greeting",
+      "model": "greeting",
+      "plugins": {
+        "da": {
+          "rows": 1,
+          "columns": 1,
+          "fields": [
+            {
+              "name": "placeholder",
+              "selector": "div>div:nth-child(1)"
+            }
+          ]
+        }
+      }
+    }
+  ],
+
+  "models": [
+    {
+      "id": "greeting",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "placeholder",
+          "label": "Input Placeholder",
+          "value": "Enter your name"
+        }
+      ]
+    }
+  ],
+
+  "filters": []
+}

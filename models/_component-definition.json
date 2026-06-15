@@ -64,6 +64,9 @@
         },
         {
           "...": "../blocks/hero-slider/_*.json#/definitions"
+        },
+        {
+           "...":"../blocks/accordion/_*.json#/definitions"
         }
       ]
     },

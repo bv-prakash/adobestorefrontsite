@@ -45,7 +45,10 @@
       "product-recommendations",
       "targeted-block",
       "text",
-      "complaint-form"
+      "complaint-form",
+      "promo-banner",
+      "custom-slider",
+      "hero-slider"
     ]
   },
   {
