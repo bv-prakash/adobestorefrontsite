@@ -5,6 +5,7 @@ import { initializers } from '@dropins/tools/initializer.js';
 import { isAemAssetsEnabled } from '@dropins/tools/lib/aem/assets.js';
 import { getConfigValue, getRootPath } from '@dropins/tools/lib/aem/configs.js';
 import { CORE_FETCH_GRAPHQL, CS_FETCH_GRAPHQL, fetchPlaceholders } from '../commerce.js';
+import initializeGreeting from './greeting.js';
 
 const DROPIN_WEBSITE_COOKIE = 'dropin_website_path';
 const getWebsitePath = () => getRootPath() || '/';
@@ -101,6 +102,8 @@ export default async function initializeDropins() {
     await import('./auth.js');
 
     await import('./personalization.js');
+
+    await initializeGreeting();
 
     import('./cart.js');
 

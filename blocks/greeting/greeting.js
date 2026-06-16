@@ -1,6 +1,18 @@
+/*  Original Vanilla JS implementation */
+/*
 export default async function decorate(block) {
-  const placeholder = block.textContent.trim()
+    const firstRow = block.children[0];
+
+  const placeholder = firstRow.textContent.trim()
     || 'Enter your name';
+
+    if (block.children.length > 1) {
+        console.warn(
+        'Greeting block expects only one row.'
+        );
+    }
+
+   console.log('block data', block);
 
   block.innerHTML = `
     <div class="greeting-wrapper">
@@ -18,7 +30,7 @@ export default async function decorate(block) {
       </h2>
 
     </div>
-  `;
+   `;
 
   const input = block.querySelector('.greeting-input');
 
@@ -33,4 +45,36 @@ export default async function decorate(block) {
 
       : 'Hello Shopper 👋';
   });
+}
+
+*/
+
+/* Dropin concept */
+
+// import { render } from '../../scripts/dropins/greeting/index.js';
+
+// export default async function decorate(block) {
+//   const placeholder = block.children[0]?.textContent.trim() || 'Enter your name';
+
+//   block.innerHTML = '';
+
+//   render.mount(block, { placeholder, defaultMessage: 'Hello Shopper 👋' });
+// } 
+
+/*  Imported Dropin */
+
+import { render as renderGreeting } from '@dropins/greeting/index.js';
+
+export default async function decorate(block) {
+  const firstRow = block.children[0];
+  const placeholder = firstRow?.textContent.trim() || 'Enter your name';
+
+  if (block.children.length > 1) {
+    console.warn('Greeting block expects only one row.');
+  }
+
+  const mountPoint = document.createElement('div');
+  block.replaceChildren(mountPoint);
+
+  await renderGreeting(mountPoint, { placeholder, defaultMessage: 'Hello Shopper 👋' });
 }

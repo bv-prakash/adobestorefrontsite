@@ -21,10 +21,25 @@ fs.readdirSync('node_modules/@dropins', { withFileTypes: true }).forEach((file) 
     return;
   }
 
+  // Handle greeting dropin separately — it's a local package that needs /dist
+  if (file.name === 'greeting') {
+    const greetingDropinSrc = path.join('node_modules', '@dropins', 'greeting', 'dist');
+    const greetingDropinDest = path.join(dropinsDir, 'greeting');
+    if (fs.existsSync(greetingDropinSrc)) {
+      fs.cpSync(greetingDropinSrc, greetingDropinDest, { recursive: true });
+      console.info('✅ Greeting dropin copied to scripts/__dropins__/greeting');
+    } else {
+      console.warn('⚠️  Greeting dropin dist not found at:', greetingDropinSrc);
+      console.warn('   Run "npm run build" inside your greeting dropin repo first, then re-run "npm i" here.');
+    }
+    return; // ← prevent the generic copy below from overwriting /dist output
+  }
+
   // Skip if is not folder
   if (!file.isDirectory()) {
     return;
   }
+
   fs.cpSync(path.join('node_modules', '@dropins', file.name), path.join(dropinsDir, file.name), {
     recursive: true,
     filter: (src) => (!src.endsWith('package.json')),
@@ -69,7 +84,7 @@ function checkPackageLockForArtifactory() {
 function checkSourceMaps() {
   const hlxIgnorePath = '.hlxignore';
   if (!fs.existsSync(hlxIgnorePath) || !fs.readFileSync(hlxIgnorePath, 'utf-8').includes('*.map')) {
-    console.info('⚠️ Sourcemaps may be added to the repo. WARNING: Please remove the *.map files or add "*.map" to .hlxignore before going live!\n');
+    console.info('⚠️  Sourcemaps may be added to the repo. WARNING: Please remove the *.map files or add "*.map" to .hlxignore before going live!\n');
   }
 }
 
