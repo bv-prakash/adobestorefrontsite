@@ -51,18 +51,20 @@ export default async function decorate(block) {
 
 /* Dropin concept */
 
-// import { render } from '../../scripts/dropins/greeting/index.js';
+/*
+import { render } from '../../scripts/dropins/greeting/index.js';
 
-// export default async function decorate(block) {
-//   const placeholder = block.children[0]?.textContent.trim() || 'Enter your name';
+export default async function decorate(block) {
+  const placeholder = block.children[0]?.textContent.trim() || 'Enter your name';
 
-//   block.innerHTML = '';
+  block.innerHTML = '';
 
-//   render.mount(block, { placeholder, defaultMessage: 'Hello Shopper 👋' });
-// } 
+  render.mount(block, { placeholder, defaultMessage: 'Hello Shopper 👋' });
+} */
 
 /*  Imported Dropin */
 
+// eslint-disable-next-line import/no-unresolved
 import { render as renderGreeting } from '@dropins/greeting/index.js';
 
 export default async function decorate(block) {
